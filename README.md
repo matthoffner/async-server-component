@@ -2,7 +2,7 @@
 
 A sharable react component for re-rendering the server rendered html initially during the client render.
 
-This prevents a flash of unstyled content during rendering a dynamically imported component render.
+This prevents a flash of unstyled content during rendering a dynamically imported component.
 
 Taken from solutions provided in [this issue in React](https://github.com/facebook/react/issues/6985).
 
@@ -24,11 +24,11 @@ const Header = asyncComponent({
 });
 ```
 
-## Server Side Treeshaking
+## Server side treeshaking
 
 If its possible to create a server and client version of a component, then `<AsyncServerComponent />` can prevent a component from being loaded on the client, potentially reducing bundle size.
 
-The example below conditionally renders the more expensive logged in version, but can it can be safely excluded logged out for reduced bundle size:
+The example below conditionally renders the more expensive logged in version, but can it can be safely excluded for logged out users, reducing the bundle size:
 
 ```js
 const ServerComponent = ({ loggedIn }) => {

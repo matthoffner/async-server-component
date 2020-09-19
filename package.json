@@ -1,0 +1,10 @@
+{
+  "name": "async-server-component",
+  "version": "1.0.2",
+  "main": "src/index.js",
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6"
+  },
+  "devDependencies": {}
+}

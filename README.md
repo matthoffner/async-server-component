@@ -6,9 +6,15 @@ This prevents a flash of unstyled content during rendering a dynamically importe
 
 Taken from solutions provided in [this issue in React](https://github.com/facebook/react/issues/6985).
 
+## Usage
+
+```js
+npm install async-server-component
+```
+
 This component is used for two different use cases:
 
-## Suspense on the server
+### Suspense on the server
 
 Preserve the server rendered loading state when client component is dynamically imported:
 
@@ -24,7 +30,7 @@ const Header = asyncComponent({
 });
 ```
 
-## Server side treeshaking
+### Server side treeshaking
 
 If its possible to create a server and client version of a component, then `<AsyncServerComponent />` can prevent a component from being loaded on the client, potentially reducing bundle size.
 
